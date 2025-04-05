@@ -49,8 +49,8 @@ df_resultado['espacial'] = df[espacial_cols].sum(axis=1)
 
 
 
-if 'Nombre' in df.columns:
-    df_resultado.insert(0, 'Nombre', df['Nombre'])
+if 'Carrera' in df.columns:
+    df_resultado.insert(0, 'Carrera', df['Carrera'])
 
 # Guarda el resultado
 df_resultado.to_csv("resultados_por_aptitudes.csv", index=False)
