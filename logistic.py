@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, f1_score, classification_report
 from sklearn.preprocessing import StandardScaler
 
 # Cargar los datos
-file_path = 'resultados_por_interes.csv'
+file_path = 'resultados_por_interes_normalizado.csv'
 data = pd.read_csv(file_path)
 
 # Definir las características (X) y la variable objetivo (y)

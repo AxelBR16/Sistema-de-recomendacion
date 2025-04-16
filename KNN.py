@@ -5,20 +5,18 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.metrics import f1_score
 
 
-file_path = 'resultados_por_interes.csv'
+file_path = 'resultados_por_interes_normalizado.csv'
 data = pd.read_csv(file_path)
 
-print(data.head())
 
-X = data[['Biologicos','Mecanicos','Campestres','Geofisicos',
-          'Sociales','Literarios','Organizacion','Persuasivo',
-          'Calculo','Contabilidad','Musical','Artistico','Cientificos']]
+idx = data.columns.get_loc('Carrera')
 
+X = data.drop(columns=['Carrera'])
 y = data['Carrera']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-knn_model = KNeighborsClassifier(n_neighbors=5)  # Puedes cambiar el número de vecinos
+knn_model = KNeighborsClassifier(n_neighbors=13)  
 
 knn_model.fit(X_train, y_train)
 

@@ -1,6 +1,7 @@
-from tensorflow import Sequential
-from tensorflow import Dense
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 
+import tensorflow as tf
 
 import pandas as pd
 import tensorflow as tf
@@ -8,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 # Cargar datos
-df = pd.read_csv('resultados_por_interes.csv')
+df = pd.read_csv('resultados_por_interes_normalizado.csv')
 
 # Separar entrada y salida
 X = df.drop(columns=['Carrera'])
@@ -34,8 +35,4 @@ model.fit(X_train, y_train, epochs=50, batch_size=8, verbose=1)
 loss, acc = model.evaluate(X_test, y_test)
 print(f'Precisión: {acc*100:.2f}%')
 
-# Para predecir una nueva muestra
-nueva_muestra = X.iloc[0:1]  # por ejemplo, la primera fila
-pred = model.predict(nueva_muestra)
-pred_clase = le.inverse_transform([pred.argmax()])
-print("Predicción:", pred_clase[0])
+
