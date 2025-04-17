@@ -1,6 +1,6 @@
 import pandas as pd
 
-#Remplazar emociones por numeros segun la rubrica
+#Remplazar las respuestas por numeros segun la rubrica
 
 archivo_csv = "aptitudes.csv" 
 df = pd.read_csv(archivo_csv) 
