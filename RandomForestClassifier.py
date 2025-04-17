@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-file_path = 'resultados_por_interes.csv'
+file_path = 'resultados_por_interes_normalizado.csv'
 data = pd.read_csv(file_path)
 
 print(data.head())
