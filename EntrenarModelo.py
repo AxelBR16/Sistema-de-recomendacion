@@ -27,4 +27,5 @@ print(f"Precisión del modelo: {accuracy * 100:.2f}%")
 print("Reporte de clasificación:\n", classification_report(y_test, y_pred))
 
 # Guardar el modelo entrenado
-joblib.dump(random_forest, 'modelo_random_forest.pkl')
+joblib.dump(random_forest, 'modelo_random_forest_intereses.pkl')
+print("Modelo guardado como modelo_random_forest_intereses.pkl")
