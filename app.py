@@ -16,9 +16,9 @@ modelos_info = {
         'scaler_path': '/tmp/scaler_aptitudes.pkl'
     },
     'intereses': {
-        'model_key': 'ModelRepositoryintereses/modelo_random_forest_intereses_optimizado.pkl',
-        'model_path': '/tmp/modelo_random_forest_intereses_optimizado.pkl',
-        'scaler_key': 'ModelRepositoryintereses/scaler_intereses.pkl',
+        'model_key': 'ModelRepository/modelo_random_forest_Intereses_optimizado.pkl',
+        'model_path': '/tmp/modelo_random_forest_Intereses_optimizado.pkl',
+        'scaler_key': 'ModelRepository/scaler_intereses.pkl',
         'scaler_path': '/tmp/scaler_intereses.pkl'
     }
 }
